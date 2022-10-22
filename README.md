@@ -14,7 +14,7 @@ its extremely slow and allocates a lots of memory.
 ## PostgreSQL
 
 Create table `make postgresql` or
-`cat testdata/psql_create_table.sql | sed --expression='s/{{\.Table}}/serialkeys/g'`
+`cat psql_create_table.sql | sed --expression='s/{{\.Table}}/serialkeys/g'`
 
 ```sql
 CREATE TABLE IF NOT EXISTS serialkeys (
