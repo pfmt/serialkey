@@ -2,6 +2,13 @@ module github.com/pfmt/serialkey
 
 go 1.18
 
+retract (
+	v0.1.0
+	v0.0.3
+	v0.0.2
+	v0.0.1
+)
+
 require (
 	github.com/alecthomas/kong v0.6.1
 	github.com/jackc/pgx/v5 v5.0.2
