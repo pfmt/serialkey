@@ -214,12 +214,12 @@ type cmpKV struct {
 	got  int64
 }
 
-func (kv cmpKV) Sprint(a ...interface{}) string {
+func (kv cmpKV) Sprint(a ...any) string {
 	kv.test = fmt.Sprint(a...)
 	return kv.String()
 }
 
-func (kv cmpKV) Sprintf(format string, a ...interface{}) string {
+func (kv cmpKV) Sprintf(format string, a ...any) string {
 	kv.test = format
 	return fmt.Sprintf(kv.String(), a...)
 }
@@ -244,11 +244,11 @@ type errKV struct {
 	err error
 }
 
-func (kv errKV) Sprint(a ...interface{}) string {
+func (kv errKV) Sprint(a ...any) string {
 	return kv.Sprintf(fmt.Sprint(a...))
 }
 
-func (kv errKV) Sprintf(format string, a ...interface{}) string {
+func (kv errKV) Sprintf(format string, a ...any) string {
 	return fmt.Sprintf(format+kv.String(), a...)
 }
 
